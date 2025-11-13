@@ -1,0 +1,25 @@
+// Definimos el modelo para nuestros datos
+data class Estudiante(
+    val carnet: String,
+    val nombre: String,
+    val edad: Int,
+    val carrera: String
+)
+
+fun main() {
+    // Creamos una instancia (objeto) a partir de nuestro modelo
+    val estudiante1 = Estudiante(
+        carnet = "2025-AB123",
+        nombre = "Ana López",
+        edad = 20,
+        carrera = "Técnico en Ing. de Desarrollo de Software"
+    )
+
+    println(estudiante1)
+    // Salida: Estudiante(carnet=2025-AB123, nombre=Ana López, edad=20, carrera=Técnico en Ing. de Desarrollo de Software)
+
+    // Usando copy() para crear un nuevo estudiante cambiando solo algunos valores
+    val estudiante2 = estudiante1.copy(nombre = "Carlos Rivas", carnet = "2025-CD456")
+    println(estudiante2)
+    // Salida: Estudiante(carnet=2025-CD456, nombre=Carlos Rivas, edad=20, carrera=Técnico en Ing. de Desarrollo de Software)
+}

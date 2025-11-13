@@ -1,0 +1,34 @@
+fun main() {
+    // Lista de solo lectura
+    val fruits = listOf("Manzana", "Banana", "Cereza")
+    println("Lista de frutas: $fruits")
+
+    // Acceder a elementos
+    println("Primera fruta: ${fruits[0]}")
+    println("Total de frutas: ${fruits.size}")
+
+    // Lista mutable
+    val animals = mutableListOf("Perro", "Gato", "Conejo", "Elefante")
+
+    // Eliminar elementos
+    animals.remove("Gato")
+    println("Después de eliminar 'Gato': $animals")
+
+    animals.removeAt(0)
+    println("Después de eliminar el primer elemento: $animals")
+
+    animals.removeAll(listOf("Conejo"))
+    println("Después de eliminar 'Conejo': $animals")
+
+    // Actualizar elementos
+    val cities = mutableListOf("New York", "London", "Tokyo")
+    cities[1] = "Paris"
+    println("\nCiudades actualizadas: $cities")
+
+    for (i in cities.indices) {
+        if (cities[i] == "Tokyo") {
+            cities[i] = "Sydney"
+        }
+    }
+    println("Lista final de ciudades: $cities")
+}

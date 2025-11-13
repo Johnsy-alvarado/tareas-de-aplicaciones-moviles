@@ -1,0 +1,25 @@
+fun main() {
+    // Crear un arreglo usando arrayOf
+    val numbers = arrayOf(1, 2, 3, 4, 5)
+    println("Arreglo de números: ${numbers.joinToString()}")
+
+    // Crear un arreglo usando el constructor Array
+    val squares = Array(5) { i -> (i + 1) * (i + 1) }
+    println("Cuadrados del 1 al 5: ${squares.joinToString()}")
+
+    // Crear un arreglo de Strings nulos
+    val planets = arrayOfNulls<String>(8)
+    planets[0] = "Mercurio"
+    planets[1] = "Venus"
+    planets[2] = "Tierra"
+    planets[3] = "Marte"
+    planets[4] = "Júpiter"
+    planets[5] = "Saturno"
+    planets[6] = "Urano"
+    planets[7] = "Neptuno"
+
+    println("\nPlanetas del sistema solar:")
+    for (i in planets.indices) {
+        println("${planets[i]} está en la posición ${i + 1}")
+    }
+}
